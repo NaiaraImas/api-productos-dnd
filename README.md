@@ -4,6 +4,9 @@ Proyecto final del curso de backend Node.js.
 Una API RESTful para gestionar productos relacionados con Dungeons & Dragons.  
 Incluye autenticación con JWT, control de roles y conexión a Firebase Firestore.
 
+npm install
+npm run dev
+
 ## 🚀 Funcionalidades
 
 - CRUD completo sobre productos
