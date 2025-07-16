@@ -56,4 +56,12 @@ cd api-productos-dnd
 npm install
 npm run dev
 
+📬 Colección Postman
+Podés probar todos los endpoints de la API con esta colección:
+
+📁 coleccion-postman-proyecto-final.json
+
+Importala en Postman para acceder a rutas como login, registro, productos, etc.
+
+
 NaiaraImas
