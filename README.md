@@ -1,35 +1,36 @@
 # 🧙‍♂️ API de Productos DnD
 
 Proyecto final del curso de backend Node.js.  
-Una API RESTful para gestionar productos relacionados con Dungeons & Dragons.  
+Una API RESTful para gestionar productos relacionados con *Dungeons & Dragons*.  
 Incluye autenticación con JWT, control de roles y conexión a Firebase Firestore.
 
-npm install
-npm run dev
+---
 
 ## 🚀 Funcionalidades
 
 - CRUD completo sobre productos
 - Registro y login de usuarios
-- Roles (`admin`, `usuario`)
+- Control de roles (`admin`, `usuario`)
 - Rutas protegidas con JWT
-- Base de datos en Firestore
+- Conexión con Firebase Firestore
+- Separación por capas (routes, controllers, services, middlewares)
 
-## 🔐 Rutas
+---
 
-| Método | Endpoint                  | Descripción                    |
-|--------|---------------------------|--------------------------------|
-| POST   | /api/auth/register        | Registro de usuario            |
-| POST   | /api/auth/login           | Login y generación de token    |
-| GET    | /api/products             | Ver todos los productos        |
-| GET    | /api/products/:id         | Ver producto por ID            |
-| POST   | /api/products             | Crear producto *(solo admin)*  |
-| PUT    | /api/products/:id         | Editar producto *(solo admin)* |
-| DELETE | /api/products/:id         | Borrar producto *(solo admin)* |
+## 🔧 Instalación
+
+```bash
+git clone https://github.com/NaiaraImas/api-productos-dnd.git
+cd api-productos-dnd
+npm install
+npm run dev
+```
+
+---
 
 ## 🧪 Variables de entorno
 
-Crear un archivo `.env` con los siguientes datos:
+Crear un archivo `.env` en la raíz del proyecto con tus credenciales de Firebase y tu clave JWT:
 
 ```env
 JWT_SECRET=claveSecretaSuperSegura
@@ -37,31 +38,44 @@ API_KEY=...
 AUTH_DOMAIN=...
 PROJECT_ID=...
 ...
+```
 
-🧰 Tecnologías usadas
-Node.js + Express
+---
 
-Firebase Firestore
+## 🔐 Rutas de la API
 
-JWT para autenticación
+| Método | Endpoint                  | Descripción                    |
+|--------|---------------------------|--------------------------------|
+| POST   | /auth/register            | Registro de usuario            |
+| POST   | /auth/login               | Login y generación de token    |
+| GET    | /api/products             | Ver todos los productos        |
+| GET    | /api/products/:id         | Ver producto por ID            |
+| POST   | /api/products/create      | Crear producto *(solo admin)*  |
+| PUT    | /api/products/:id         | Editar producto *(solo admin)* |
+| DELETE | /api/products/:id         | Borrar producto *(solo admin)* |
 
-bcryptjs para encriptar contraseñas
+---
 
-dotenv para configuración
+## 🧰 Tecnologías usadas
 
-curl / Postman para testeo
+- Node.js + Express
+- Firebase Firestore
+- JWT para autenticación
+- bcryptjs para encriptar contraseñas
+- dotenv para configuración de entorno
+- Postman / curl para pruebas
+- Git y GitHub para control de versiones
 
-git clone https://github.com/tuusuario/api-productos-dnd.git
-cd api-productos-dnd
-npm install
-npm run dev
+---
 
-📬 Colección Postman
+## 📬 Colección Postman
+
 Podés probar todos los endpoints de la API con esta colección:
 
-📁 coleccion-postman-proyecto-final.json
+📁 [`coleccion-postman-proyecto-final.json`](./coleccion-postman-proyecto-final.json)
 
-Importala en Postman para acceder a rutas como login, registro, productos, etc.
+Importala en Postman para acceder rápidamente a login, registro y rutas de productos.
 
+---
 
-NaiaraImas
+> Proyecto desarrollado por **Naiara Imas** ✨
